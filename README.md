@@ -1,32 +1,53 @@
-## README
+<h1 align="center">📧 Smart Email Crawler</h1>
 
-### How to Run the Script
+<p align="center">
+  <em>An intelligent email crawler that combines Google search with multi-strategy scraping to extract emails accurately from the web.</em>
+</p>
 
-1. **Install Required Libraries:**
-   Make sure you have Python installed. Then, install the required libraries using pip:
-   ```bash
-   pip install aiohttp beautifulsoup4 selenium webdriver-manager
-   ```
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" />
+  <img src="https://img.shields.io/badge/status-active-success?style=flat-square" />
+</p>
 
-2. **Configure the Script:**
-   - Open the script in your preferred text editor.
-   - Replace the placeholders for `CSE_ID` and `API_KEY` with your actual Custom Search Engine ID and API Key.
+---
 
-3. **Run the Script:**
-   Save the script as `email_scraper.py` and run it using Python:
-   ```bash
-   python email_scraper.py
-   ```
+## ✨ Features
 
-4. **Output:**
-   The script will log the found emails and save them.
+- 🔍 **Google-powered discovery** — finds candidate pages via targeted search queries
+- 🕸️ **Multi-method scraping** — combines requests, BeautifulSoup, and dynamic fallbacks
+- 🧠 **Smart filtering** — regex + heuristics to remove noise, duplicates, and fake emails
+- ⚡ **Fast & concurrent** — batched requests for high throughput
+- 📄 **Clean output** — deduped, validated emails ready for export
 
-### Prerequisites
-- Python 3.x
-- Google Custom Search API Key
-- Custom Search Engine ID
+## 🚀 Quick Start
 
-### Script Overview
-- Fetches up to 100 URLs from Google Custom Search.
-- Extracts emails using `requests` with `BeautifulSoup` and `Selenium` for robustness.
-- Logs found emails.
+```bash
+git clone https://github.com/Hayrapetyan-Anri/smart-email-crawler.git
+cd smart-email-crawler
+pip install -r requirements.txt
+python main.py
+```
+
+## 🧩 How It Works
+
+```
+┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
+│  Google      │───▶│  Fetch &     │───▶│  Extract &   │───▶│  Dedupe &    │
+│  Search      │    │  Parse HTML  │    │  Validate    │    │  Export      │
+└──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘
+```
+
+## ⚙️ Configuration
+
+Set your search query, depth, and output file directly in `main.py` (or adapt to CLI flags as needed).
+
+## 📌 Use Cases
+
+- Lead generation for sales & marketing teams
+- Outreach list building
+- OSINT & research workflows
+
+## 📝 License
+
+MIT © [Anri Hayrapetyan](https://anridev.com)
